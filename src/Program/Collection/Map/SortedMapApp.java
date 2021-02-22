@@ -9,9 +9,9 @@ public class SortedMapApp {
 
         SortedMap<String, String> sortedMap = new TreeMap<>();
 
-        sortedMap.put("A", "Andi");
-        sortedMap.put("B", "Bandi");
-        sortedMap.put("C", "Candi");
+        sortedMap.put("B", "Andi");
+        sortedMap.put("C", "Bandi");
+        sortedMap.put("A", "Candi");
 
         for (var key : sortedMap.keySet()){
             System.out.println(key);
@@ -29,9 +29,9 @@ public class SortedMapApp {
 
         SortedMap<String,String> sortedMapWithComparator = new TreeMap<>(stringComparator);
 
-        sortedMapWithComparator.put("A", "Abdul");
-        sortedMapWithComparator.put("B", "Bedul");
-        sortedMapWithComparator.put("C", "Citul");
+        sortedMapWithComparator.put("B", "Abdul");
+        sortedMapWithComparator.put("C", "Bedul");
+        sortedMapWithComparator.put("A", "Citul");
 
         for (var key1 : sortedMapWithComparator.values()){
             System.out.println(key1);
