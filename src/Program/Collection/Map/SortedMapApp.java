@@ -1,15 +1,13 @@
 package Program.Collection.Map;
 
 import java.lang.reflect.MalformedParameterizedTypeException;
-import java.util.Comparator;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.stream.Collector;
 
 public class SortedMapApp {
     public static void main(String[] args) {
 
-        Map<String, String> sortedMap = new TreeMap<>();
+        SortedMap<String, String> sortedMap = new TreeMap<>();
 
         sortedMap.put("A", "Andi");
         sortedMap.put("B", "Bandi");
@@ -29,7 +27,7 @@ public class SortedMapApp {
             }
         };
 
-        Map<String,String> sortedMapWithComparator = new TreeMap<>(stringComparator);
+        SortedMap<String,String> sortedMapWithComparator = new TreeMap<>(stringComparator);
 
         sortedMapWithComparator.put("A", "Abdul");
         sortedMapWithComparator.put("B", "Bedul");
@@ -38,6 +36,13 @@ public class SortedMapApp {
         for (var key1 : sortedMapWithComparator.values()){
             System.out.println(key1);
         }
+
+        //Immutable Sorted Map
+
+        Map<String,String> empty = Collections.emptySortedMap();
+        Map<String, String> immutableSortedMap = Collections.unmodifiableSortedMap(sortedMap);
+
+        //immutableSortedMap.put("D", "Deni"); error
 
     }
 }
